@@ -68,14 +68,15 @@ while not found:
         del faits[ensembles[0]]
         del ensembles[0]
         for item in values:
-            occurences = sum(1 for value in faits.values() if item in value)
-            if item in possible and occurences == 0:
+            # occurences = sum(1 for value in faits.values() if item in value)
+            if item in possible: # and occurences == 0:
                 possible.remove(item)
 
 
     if len(possible) == 1:
         print('JE PENSE............')
         print(possible[0])
+        found = True
         break
 
     if len(ensembles) == 0:
